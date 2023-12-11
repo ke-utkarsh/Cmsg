@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/send_bulk_toolbar"
+        app:showAsAction="always"
+        android:title="Home"
+        android:icon="@drawable/icon_msg_swipe" />
+
+    <item
+        android:id="@+id/delete_toolbar"
+        app:showAsAction="always"
+        android:title="Home"
+        android:icon="@drawable/icon_delete" />
+
+</menu>

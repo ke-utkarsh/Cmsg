@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar_top_sent_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        app:title="@string/action_settings"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:navigationIcon="@drawable/nav_icon_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/color_primary_light"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_top_sent_dashboard">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/TextViewStyleValue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/message_parameters"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/cb_order_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/dmsansregular"
+        android:layout_marginTop="32dp"
+        android:buttonTint="@color/colorGrey"
+        android:checked="true"
+        android:enabled="false"
+        android:text="@string/order_number_label2"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="@+id/cv_user"
+        app:layout_constraintTop_toBottomOf="@+id/cv_user" />
+
+    <CheckBox
+        android:id="@+id/cb_rec_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/dmsansregular"
+        android:buttonTint="@color/green"
+        android:text="@string/receiver_name_label"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="@+id/cv_user"
+        app:layout_constraintTop_toBottomOf="@+id/cb_order_num" />
+
+    <CheckBox
+        android:id="@+id/cb_rec_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/dmsansregular"
+        android:layout_marginTop="16dp"
+        android:buttonTint="@color/green"
+        android:text="@string/receiver_number_label"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="@+id/cv_user"
+        app:layout_constraintTop_toBottomOf="@+id/cb_rec_name" />
+
+    <CheckBox
+        android:id="@+id/cb_rec_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/dmsansregular"
+        android:layout_marginTop="16dp"
+        android:buttonTint="@color/green"
+        android:text="@string/receiver_msg_label"
+        android:textColor="@color/green"
+        app:layout_constraintStart_toStartOf="@+id/cv_user"
+        app:layout_constraintTop_toBottomOf="@+id/cb_rec_number" />
+
+
+    <Button
+        android:id="@+id/button_apply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        android:text="@string/apply_label"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/cv_user"
+        app:layout_constraintStart_toStartOf="@+id/cv_user"
+        app:layout_constraintTop_toBottomOf="@+id/cb_rec_msg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

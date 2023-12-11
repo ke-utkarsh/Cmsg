@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_order_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Order Number : 012345"
+            android:textColor="#007565"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/tv_order_no"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_no"
+            app:srcCompat="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/tv_contact_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Nikhil Anand"
+            android:textColor="#3B3B3B"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_contact"
+            app:layout_constraintStart_toEndOf="@id/iv_contact"
+            app:layout_constraintTop_toTopOf="@id/iv_contact" />
+
+        <ImageView
+            android:id="@+id/iv_phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_contact_name"
+            app:layout_constraintStart_toEndOf="@id/tv_contact_name"
+            app:layout_constraintTop_toTopOf="@id/tv_contact_name"
+            app:srcCompat="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/tv_phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView"
+            android:textColor="#3B3B3B"
+            app:layout_constraintBottom_toBottomOf="@id/iv_phone_no"
+            app:layout_constraintStart_toEndOf="@+id/iv_phone_no"
+            app:layout_constraintTop_toTopOf="@id/iv_phone_no" />
+
+        <ImageView
+            android:id="@+id/iv_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@id/iv_contact"
+            app:layout_constraintTop_toBottomOf="@id/iv_contact"
+            app:srcCompat="@drawable/ic_message" />
+
+        <TextView
+            android:id="@+id/tv_sms_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:maxLines="2"
+            android:text="TextViefjifjiefhihfiesddwdwqdwdwqdqwqdwqdwqdwqdwqdqwqwdwqssdsdsdqdwhfihfiewfoiefoiehfoienfioenfioenfioefiefefoieifoewewenfeweknw"
+            android:textColor="#3B3B3B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_sms"
+            app:layout_constraintTop_toBottomOf="@id/tv_contact_name"
+            app:layout_constraintTop_toTopOf="@+id/iv_sms" />
+
+        <TextView
+            android:id="@+id/tv_datetime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="9:39 AM"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sms_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

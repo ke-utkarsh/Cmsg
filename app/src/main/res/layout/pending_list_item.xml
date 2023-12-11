@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="7dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/tv_order_no"
+            style="@style/TextViewStyleValue2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Order Number : 012345" />
+
+        <ImageView
+            android:id="@+id/iv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_profile"
+            app:layout_constraintStart_toStartOf="@+id/tv_order_no"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_no" />
+
+        <TextView
+            android:id="@+id/tv_contact_name"
+            style="@style/TextViewStyleValue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:maxLines="1"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_contact"
+            app:layout_constraintStart_toEndOf="@+id/iv_contact"
+            tools:text="Nikhil Anand" />
+
+        <ImageView
+            android:id="@+id/iv_phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_contact"
+            app:layout_constraintEnd_toStartOf="@+id/tv_phone_no"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_contact_name"
+            app:srcCompat="@drawable/ic_phone" />
+
+        <TextView
+            android:id="@+id/tv_phone_no"
+            style="@style/TextViewStyleValue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_contact_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_no"
+            tools:text="90909090132" />
+
+        <ImageView
+            android:id="@+id/iv_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/ic_message"
+            app:layout_constraintStart_toStartOf="@+id/iv_contact"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_no" />
+
+        <TextView
+            android:id="@+id/tv_sms_content"
+            style="@style/TextViewStyleValue1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:layout_marginStart="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_phone_no"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/iv_sms"
+            app:layout_constraintTop_toTopOf="@+id/iv_sms"
+            tools:text="io" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

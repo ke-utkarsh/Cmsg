@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "49300434205",
+    "project_id": "couriemate-msg",
+    "storage_bucket": "couriemate-msg.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49300434205:android:f0235748c004020eae45f4",
+        "android_client_info": {
+          "package_name": "ymsli.com.cmsg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "49300434205-9ng14no27nve0tjejmtf9425tthv3gos.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgvI_ET8a0ZbsBTDtSrMueqvH-76yJY7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "49300434205-9ng14no27nve0tjejmtf9425tthv3gos.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/action_bar_top_pending_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/nav_icon_back"
+        app:layout_constraintVertical_bias="0.0"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <TextView
+        android:id="@+id/tv_list_type"
+        style="@style/TextViewStyleValueHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:text="@string/delivered"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/action_bar_top_pending_list" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_filters"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_list_type">
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:constraint_referenced_ids="cv_select_all,cv_msg_filter"
+            app:flow_horizontalAlign="start"
+            app:flow_horizontalBias="0"
+            app:flow_horizontalGap="24dp"
+            app:flow_maxElementsWrap="1"
+            app:flow_verticalBias="0"
+            app:flow_verticalGap="8dp"
+            app:flow_wrapMode="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_select_all"
+            android:layout_width="0dp"
+            card_view:cardBackgroundColor="@color/color_primary_light"
+            android:layout_height="match_parent"
+            card_view:cardCornerRadius="12dp">
+
+            <CheckBox
+                android:id="@+id/cb_select_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_all_label"
+                android:layout_gravity="center"
+                android:layout_marginEnd="8dp"
+                android:buttonTint="@color/green"
+                android:textColor="@color/green" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cv_msg_filter"
+            android:layout_width="0dp"
+            style="@style/SpinnerCardView"
+            android:layout_height="match_parent"
+            card_view:cardBackgroundColor="@color/color_primary_light"
+            card_view:cardCornerRadius="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="4dp"
+                android:layout_gravity="start|center_vertical"
+                android:src="@drawable/icon_filter_spinner"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_msg_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingStart="32dp"
+                android:backgroundTint="@color/green"
+                android:entries="@array/message_filter"
+                android:theme="@style/Spinner"
+                android:drawSelectorOnTop="true"
+                android:spinnerMode="dialog" />
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPendingMsgList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_filters"
+        tools:listitem="@layout/pending_list_item" />
+
+    <TextView
+        android:id="@+id/tv_no_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="48dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:text="@string/no_pending_message_label"
+        android:textColor="@color/green"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/green"
+        android:foregroundTint="@color/green"
+        android:indeterminateTint="@color/green"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

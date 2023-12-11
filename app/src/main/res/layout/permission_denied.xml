@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:paddingBottom="16dp">
+
+    <ImageView
+        android:id="@+id/iv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_error" />
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/dmsansbold"
+        android:text="@string/error_label"
+        android:textColor="#3B3B3B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_logout"
+        app:layout_constraintStart_toEndOf="@id/iv_logout"
+        app:layout_constraintTop_toTopOf="@id/iv_logout" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/dmsansregular"
+        android:text="@string/permission_denied"
+        android:textColor="#3B3B3B"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/iv_logout"
+        app:layout_constraintTop_toBottomOf="@id/iv_logout" />
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bg_btn_dialog_confirm"
+        android:fontFamily="@font/dmsansregular"
+        android:text="@string/ACTION_OK"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_confirm"
+        app:layout_constraintStart_toStartOf="@id/tv_message"
+        app:layout_constraintTop_toBottomOf="@id/tv_message" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_btn_dialog_confirm"
+        android:fontFamily="@font/dmsansregular"
+        android:text="@string/confirm"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/btn_back"
+        app:layout_constraintStart_toEndOf="@id/btn_back" />
+</androidx.constraintlayout.widget.ConstraintLayout>
